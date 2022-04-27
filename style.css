@@ -1,66 +1,169 @@
 :root{
-    --cor: rgb(226, 27, 27);
+  --cor: rgb(226, 27, 27);
 }
 header{
-    height: 100vh;
-    width: 300px;
-    background-color: rgb(29, 185, 247);
-    position: fixed;
+  height: 100vh;
+  width: 300px;
+  background-color: rgb(29, 185, 247);
+  position: fixed;
+  font-size: large;
 }
 header img{
-    width: 270px;
-    height: 270px;
+  width: 270px;
+  height: 270px;
+}
+nav {
+  max-width: 300px;
+  width: 100%;
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li a:hover{
+  background-color: rgb(2, 67, 151);
+}
+nav ul li a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
 }
 h2{
-    color: var(--cor) ;
-    text-align: center;
+  color: var(--cor) ;
+  text-align: center;
 }
 h1{
-    color: var(--cor) ;
-    text-align: center;
+  color: var(--cor) ;
+  text-align: center;
 }
 h3{
-    color: var(--cor) ;
-    text-align: center;
-}
-h3 img{
-    
+  color: var(--cor) ;
+  text-align: center;
 }
 body{
-    background-color:whitesmoke;
+  background-color:rgb(0, 217, 255);
+}
+#historia section{
+  padding: 50px;
+}
+#hist h2{
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
+}
+#autor h2{
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
 }
 #historia img{
-    float: left;
-    padding: 20px;
+  float: left;
+  padding: 20px;
 }
 main{
-    margin-left: 300px;
+  margin-left: 300px;
 }
+
+
 #arcoatual{
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-    display: inline-block;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  display: flexbox;
 }
 #arcoatual img{
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 300px;
-    height: 200px;
-    
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  align-items: center;
 }
-#arcosop article{
-    display: flex;
-    display: inline-block;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
+#arcoatual h1{
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
 }
+
+
 #arcosop img{
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  display: inline-flexbox;
+  margin: 30px;
+  margin-left: 110px;
+
+}
+.imagem{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.imagem:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+#arcosop section{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+#arcosop h1{
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
+}
+#arcosop h2{
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
+  margin-left:40px;
+}
+#arcosop{
+  padding: 20px;
 }
 #cadastro h1{
-    text-align: left;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
+  font-size: 30px;
 }
+#cadastro{
+  padding: 20px;
+}
+table {
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;
+  background:#fafafa ;
+  margin: 0 auto;
+  width: 80%;
+}
+
+tr:nth-child(even) {
+  background:lightgray;
+}
+#arcos h2{
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(2, 67, 151);
+}
+#arcos img{
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+#arcos{
+  padding: 20px;
+}
+
+
+
+
