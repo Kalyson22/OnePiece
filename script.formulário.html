@@ -1,6 +1,5 @@
 <script>
     let arcos = [];
-    
     function cadastrar_Arcos(lista_arcos){
         let nomeDoArco = prompt('nome do arco:');
         let episodios = parseInt(prompt('episódios:'));
@@ -14,7 +13,6 @@
         }
         lista_arcos.push(arcos);
     }
-    
     function listar_arcos(lista_arcos){
         let mensagem = '';
         let id = 0;
@@ -24,7 +22,6 @@
         }
         alert(mensagem)
     }
-
     function editar_arcos(lista_arcos){
         listar_arcos(lista_arcos);
         let id = parseInt(prompt('qual id editar?'));
@@ -53,14 +50,11 @@
         }
         lista_arcos[id] = arcosNovo;
     }
-
     function apagar_arcos(lista_arcos){
         listar_arcos(lista_arcos);
         let id = parseInt(prompt('qual id apagar?'));
         lista_arcos.splice(id, 1);
     }
-           
-    
     loop:
     while (true) {
         alert('1-Cadastrar arco\n2-Listar arcos\n3-editar\n4-apagar\n5-SAIR');
@@ -81,9 +75,6 @@
             case '5':
                 alert('SAIR')
                 break loop;
-            
-
         }
     }
-
 </script>
