@@ -201,31 +201,31 @@ def desenho(janela, images, player_car, computer_car, game_info):
 
 def move_player(player_car):
     keys = pygame.key.get_pressed()
-    moved = False
+    movimento = False
 
     if keys[pygame.K_a]:
         player_car.rotate(left=True)
     if keys[pygame.K_d]:
         player_car.rotate(right=True)
     if keys[pygame.K_w]:
-        moved = True
+        movimento = True
         player_car.mover_frente()
     if keys[pygame.K_s]:
-        moved = True
+        movimento = True
         player_car.mover_tras()
 
-    if not moved:
+    if not movimento:
         player_car.reduce_speed()
 
 
-def handle_collision(player_car, computer_car, game_info):
+def controle_collision(player_car, computer_car, game_info):
     if player_car.collide(borda_MASK) != None:
         player_car.bounce()
 
     computer_chegada_poi_collide = computer_car.collide(
         chegada_MASK, *chegada_posicao)
     if computer_chegada_poi_collide != None:
-        text_center(janela, fonte, "You lost!")
+        text_center(janela, fonte, "Você perdeu!")
         pygame.display.update()
         pygame.time.wait(5000)
         game_info.reset()
@@ -247,7 +247,7 @@ run = True
 clock = pygame.time.Clock()
 images = [(grama, (0, 0)), (pista, (0, 0)),
           (chegada, chegada_posicao), (borda, (0, 0))]
-player_car = PlayerCar(4, 4)
+player_car = PlayerCar(3, 4)
 computer_car = ComputerCar(2, 4, caminho)
 game_info = GameInfo()
 
@@ -276,10 +276,10 @@ while run:
     move_player(player_car)
     computer_car.move()
 
-    handle_collision(player_car, computer_car, game_info)
+    controle_collision(player_car, computer_car, game_info)
 
     if game_info.game_chegada():
-        text_center(janela, fonte, "You won the game!")
+        text_center(janela, fonte, "Você venceu!")
         pygame.time.wait(5000)
         game_info.reset()
         player_car.reset()
