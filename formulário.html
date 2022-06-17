@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
+    <script> src="form.tabela.js"</script>
 </head>
 <body>
     <header>
@@ -32,26 +33,30 @@
                 <table>
                     <tr>
                     <td>Nome do arco:</td>
-                    <td><input type="text" name="arco" size="40"></td>
+                    <td><input id="nomeArco" type="text" name="arco" size="40"></td>
                     </tr>
                     <tr>
                     <td>Episódios:</td>
-                    <td><input type="text" name="episódio" size="40"></td>
+                    <td><input id="episodios" type="text" name="episódio" size="40"></td>
                     </tr>
                     <tr>
                         <td>Ano de exibição</td>
-                        <td><input type="text" name="exibição" size="40"></td>
+                        <td><input id="ano" type="text" name="exibição" size="40"></td>
                     </tr>
                     <tr>
                         <td>Descrição</td>
-                        <td><textarea name="Descrição" id="" cols="30" rows="10"></textarea></td>
+                        <td><textarea id="descricao" name="Descrição" cols="30" rows="10"></textarea></td>
                     </tr>
                     <tr>
                         <td>Foto do Arco</td>
                         <td><input type="file" name="exibição" size="40"></td>
                     </tr>
                 </table>
-                <input type="submit">
+                <tbody id="listaArcosBody"></tbody>
+                <div>
+                    <input type="submit">
+                    <button onclick="vizualizar('lista')" class="cinza" type="button">Cancelar</button>
+                </div>
                 </form>
            </article>
            <section id="cadastrados"> 
