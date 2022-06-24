@@ -28,35 +28,39 @@
     <main id="form">
        <section id="cadastro">
            <h1>Cadastro dos arcos</h1>
-           <article>
+           <article page=lista>
                <form action="">
                 <table>
                     <tr>
-                    <td>Nome do arco:</td>
-                    <td><input id="nomeArco" type="text" name="arco" size="40"></td>
+                        <td class="lista">Nome do arco:</td>
+                        <td class="registros"><input id="nomeArco" type="text" name="arco" size="40"></td>
                     </tr>
                     <tr>
-                    <td>Episódios:</td>
-                    <td><input id="episodios" type="text" name="episódio" size="40"></td>
+                        <td class="lista">Episódios:</td>
+                        <td class="registros"><input id="episodios" type="text" name="episódio" size="40"></td>
                     </tr>
                     <tr>
-                        <td>Ano de exibição</td>
-                        <td><input id="ano" type="text" name="exibição" size="40"></td>
+                        <td class="lista">Ano de exibição</td>
+                        <td class="registros"><input id="ano" type="text" name="exibição" size="40"></td>
                     </tr>
                     <tr>
-                        <td>Descrição</td>
-                        <td><textarea id="descricao" name="Descrição" cols="30" rows="10"></textarea></td>
+                        <td class="lista">Descrição</td>
+                        <td class="registros"><textarea id="descricao" name="Descrição" cols="30" rows="10"></textarea></td>
                     </tr>
                     <tr>
-                        <td>Foto do Arco</td>
-                        <td><input type="file" name="exibição" size="40"></td>
+                        <td class="lista">Foto do Arco</td>
+                        <td class="registros"><input type="file" name="exibição" size="40"></td>
                     </tr>
                 </table>
-                <tbody id="listaArcosBody"></tbody>
                 <div>
                     <input type="submit">
-                    <button onclick="vizualizar('lista')" class="cinza" type="button">Cancelar</button>
+                    <button onclick="vizualizar('cadastros')" type="button">salvar</button>
+
+                    <button onclick="vizualizar('lista')" type='button'class='cinza'>Cancelar</button>
                 </div>
+                <tbody id="listaArcosBody">
+
+                </tbody>
                 </form>
            </article>
            <section id="cadastrados"> 
